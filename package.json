@@ -1,10 +1,10 @@
 {
-  "name": "mcp-server-template",
+  "name": "hyperdx-template",
   "version": "2.0.0",
   "description": "Modern TypeScript-based MCP server template",
   "main": "src/main.ts",
   "bin": {
-    "mcp-server-template": "./src/main.ts"
+    "hyperdx-template": "./src/main.ts"
   },
   "type": "module",
   "scripts": {
@@ -16,6 +16,7 @@
     "pm2:logs": "pm2 logs --lines 1000",
     "pm2:status": "pm2 status",
     "pm2:delete": "pm2 delete all",
+    "pm2:list": "pm2 list",
     "test": "bun test",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write src/**/*.ts",

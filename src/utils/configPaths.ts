@@ -16,15 +16,15 @@ export function getGlobalConfigDir(): string {
 
   if (platform === 'darwin') {
     // macOS - use ~/.config following modern convention
-    configDir = path.join(homeDir, '.config', 'mcp-server-template');
+    configDir = path.join(homeDir, '.config', 'hyperdx-template');
   } else if (platform === 'win32') {
     // Windows - use APPDATA
     const appData = process.env.APPDATA || path.join(homeDir, 'AppData', 'Roaming');
-    configDir = path.join(appData, 'mcp-server-template');
+    configDir = path.join(appData, 'hyperdx-template');
   } else {
     // Linux and other Unix-like systems - use XDG Base Directory spec
     const xdgConfig = process.env.XDG_CONFIG_HOME || path.join(homeDir, '.config');
-    configDir = path.join(xdgConfig, 'mcp-server-template');
+    configDir = path.join(xdgConfig, 'hyperdx-template');
   }
 
   // Allow environment variable override

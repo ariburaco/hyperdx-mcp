@@ -1,7 +1,7 @@
 {
   "apps": [
     {
-      "name": "mcp-server-template",
+      "name": "hyperdx-template",
       "script": "bun",
       "args": "src/main.ts",
       "interpreter": "none",
@@ -21,9 +21,9 @@
         "PORT": 3000,
         "LOG_LEVEL": "debug"
       },
-      "log_file": "./logs/mcp-server-template.log",
-      "out_file": "./logs/mcp-server-template-out.log",
-      "error_file": "./logs/mcp-server-template-error.log",
+      "log_file": "./logs/hyperdx-template.log",
+      "out_file": "./logs/hyperdx-template-out.log",
+      "error_file": "./logs/hyperdx-template-error.log",
       "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
       "kill_timeout": 5000,
       "listen_timeout": 3000,

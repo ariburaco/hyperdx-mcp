@@ -35,7 +35,7 @@ const fileFormat = winston.format.combine(
 const logger = winston.createLogger({
   level: logConfig.level,
   format: winston.format.errors({ stack: true }),
-  defaultMeta: { service: "mcp-server-template" },
+  defaultMeta: { service: "hyperdx-template" },
   transports: [],
 });
 
