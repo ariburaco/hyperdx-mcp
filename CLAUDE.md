@@ -9,11 +9,10 @@ This is a TypeScript-based MCP (Model Context Protocol) server template built wi
 ## Development Commands
 
 ### Core Development
-- `bun dev` - Start development server with file watching
-- `bun start` - Start production server
-- `bun test` - Run tests
+
+GOLDEN RULE: NEVER EVER RUN THE "dev" COMMAND. SERVE ALREADY RUNNING!
+
 - `bun run typecheck` - Run TypeScript type checking
-- `bun run lint` - Run ESLint on source files
 - `bun run format` - Format code with Prettier
 
 ### Process Management (PM2)

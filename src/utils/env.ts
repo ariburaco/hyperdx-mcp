@@ -54,6 +54,18 @@ const envSchema = z.object({
 
   // Storage
   STORAGE_PATH: z.string().default('./data/session.json'),
+
+  // HyperDX Configuration
+  HYPERDX_API_URL: z.string().default('http://localhost:8090'),
+  HYPERDX_API_KEY: z.string().optional(),
+  HYPERDX_REQUEST_TIMEOUT: numericString(30000),
+
+  // ClickHouse Configuration
+  CLICKHOUSE_URL: z.string().default('http://localhost:8123'),
+  CLICKHOUSE_DATABASE: z.string().default('default'),
+  CLICKHOUSE_USER: z.string().default('default'),
+  CLICKHOUSE_PASSWORD: z.string().default(''),
+  CLICKHOUSE_TIMEOUT: numericString(30000),
 });
 
 // Validate environment variables
@@ -117,4 +129,18 @@ export const getUploadConfig = () => ({
 export const getSecurityConfig = () => ({
   encryptCredentials: env.ENCRYPT_CREDENTIALS,
   secretKey: env.SECRET_KEY,
+});
+
+export const getHyperDXConfig = () => ({
+  apiUrl: env.HYPERDX_API_URL,
+  apiKey: env.HYPERDX_API_KEY,
+  requestTimeout: env.HYPERDX_REQUEST_TIMEOUT,
+});
+
+export const getClickHouseConfig = () => ({
+  url: env.CLICKHOUSE_URL,
+  database: env.CLICKHOUSE_DATABASE,
+  user: env.CLICKHOUSE_USER,
+  password: env.CLICKHOUSE_PASSWORD,
+  timeout: env.CLICKHOUSE_TIMEOUT,
 });
