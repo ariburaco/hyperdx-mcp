@@ -1,0 +1,17 @@
+node_modules
+dist
+logs
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+bunfig.toml
+bun.lockb
+bun.lockb.1
+
+py-version
+data/cookies.json
+data/browsers
+
+

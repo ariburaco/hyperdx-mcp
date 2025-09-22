@@ -1,0 +1,39 @@
+{
+  "apps": [
+    {
+      "name": "mcp-server-template",
+      "script": "bun",
+      "args": "src/main.ts",
+      "interpreter": "none",
+      "instances": 1,
+      "exec_mode": "fork",
+      "watch": false,
+      "max_memory_restart": "1G",
+      "restart_delay": 2000,
+      "max_restarts": 10,
+      "min_uptime": "10s",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": 3000
+      },
+      "env_development": {
+        "NODE_ENV": "development",
+        "PORT": 3000,
+        "LOG_LEVEL": "debug"
+      },
+      "log_file": "./logs/mcp-server-template.log",
+      "out_file": "./logs/mcp-server-template-out.log",
+      "error_file": "./logs/mcp-server-template-error.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss Z",
+      "kill_timeout": 5000,
+      "listen_timeout": 3000,
+      "ignore_watch": [
+        "node_modules",
+        "logs",
+        "data",
+        ".git",
+        "*.log"
+      ]
+    }
+  ]
+}
